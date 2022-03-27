@@ -3,5 +3,15 @@ from app import app
 @app.route('/')
 @app.route('/index')
 def index():
-	return "Hello World!"
+	user = {'username': 'omar'}
+	return '''
+<html>
+	<head>
+		<title>Microblog</title>
+	</head>
+	<body>
+		<h1>Hi, ''' +  user['username'] + ''' </h1>
+	</body>
+</html>
+'''
 
